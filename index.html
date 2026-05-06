@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>SharkTeeth26 • Manik-Manik Estetik</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Poppins', sans-serif;
+      background: #fff5f9;
+      color: #5a3e4b;
+      line-height: 1.5;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: linear-gradient(135deg, #ffd1dc 0%, #ffe0ec 100%);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-bottom: 3px solid #ffb6c1;
+      box-shadow: 0 6px 14px rgba(255, 182, 193, 0.3);
+    }
+
+    .shop-name {
+      font-size: 2.9rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #b3446c;
+      text-shadow: 2px 2px 0 #ffeef4;
+      margin-bottom: 0.3rem;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #8e5a6b;
+      font-style: italic;
+      background: rgba(255,255,255,0.7);
+      display: inline-block;
+      padding: 0.3rem 1.6rem;
+      border-radius: 30px;
+      backdrop-filter: blur(4px);
+    }
+
+    /* ===== INSTAGRAM BAR ===== */
+    .ig-bar {
+      background: #fce4ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.8rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #b3446c;
+      border-bottom: 1px solid #f8bbd0;
+      flex-wrap: wrap;
+    }
+
+    .ig-icon {
+      font-size: 1.6rem;
+    }
+
+    .ig-link {
+      color: #b3446c;
+      text-decoration: none;
+      border-bottom: 2px dotted #d47b92;
+      transition: 0.2s;
+    }
+
+    .ig-link:hover {
+      color: #7a2e4a;
+      border-bottom-color: #7a2e4a;
+    }
+
+    /* ===== MAIN CATALOG ===== */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1.2rem;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      text-align: center;
+      margin: 2rem 0 1.8rem;
+      color: #b3446c;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "✦ ❀ ✦";
+      display: block;
+      font-size: 1.2rem;
+      color: #f4a4bc;
+      letter-spacing: 6px;
+      margin-top: 0.3rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 1.4rem 1.2rem 1.6rem;
+      box-shadow: 0 12px 24px rgba(245, 175, 190, 0.25);
+      transition: transform 0.25s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #ffeef2;
+    }
+
+    .product-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 22px 30px rgba(245, 150, 170, 0.4);
+      border-color: #ffb6c1;
+    }
+
+    .product-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 22px;
+      background: #ffeef4;
+      margin-bottom: 1.1rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+      transition: 0.2s;
+    }
+
+    .product-title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #5a3e4b;
+      margin-bottom: 0.2rem;
+      text-align: center;
+    }
+
+    .product-price {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #b3446c;
+      background: #fff0f3;
+      padding: 0.3rem 1.2rem;
+      border-radius: 20px;
+      margin: 0.6rem 0 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .dm-order-btn {
+      background: linear-gradient(145deg, #f78ca0, #d65f7a);
+      border: none;
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      letter-spacing: 0.4px;
+      box-shadow: 0 8px 16px rgba(214, 95, 122, 0.45);
+      transition: background 0.2s, transform 0.2s;
+      text-decoration: none;
+    }
+
+    .dm-order-btn:hover {
+      background: linear-gradient(145deg, #f56983, #c94a66);
+      transform: scale(1.04);
+      box-shadow: 0 12px 20px rgba(190, 70, 100, 0.5);
+    }
+
+    .dm-order-btn i {
+      font-style: normal;
+      font-size: 1.25rem;
+    }
+
+    /* ===== PO GUIDE ===== */
+    .po-guide {
+      background: #ffffff;
+      border-radius: 35px;
+      padding: 2rem 1.8rem;
+      margin: 2.8rem 0 2rem;
+      box-shadow: 0 15px 28px rgba(255, 192, 203, 0.3);
+      border: 1px solid #ffe4ec;
+    }
+
+    .po-guide h3 {
+      font-size: 1.8rem;
+      color: #b3446c;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .po-steps {
+      list-style: none;
+      padding-left: 0.2rem;
+    }
+
+    .po-steps li {
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+    }
+
+    .step-number {
+      background: #fbc2cb;
+      color: #7a2e4a;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .highlight {
+      background: #fff0f3;
+      font-weight: 700;
+      padding: 0.1rem 0.6rem;
+      border-radius: 12px;
+      color: #b3446c;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 1.8rem;
+      background: #ffe4ec;
+      color: #7a4b5c;
+      margin-top: 2.5rem;
+      font-size: 0.95rem;
+      border-top: 2px solid #ffb6c1;
+    }
+
+    .footer-ig {
+      font-weight: 700;
+      color: #b3446c;
+      text-decoration: none;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .shop-name {
+        font-size: 2.2rem;
+      }
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1 class="shop-name">🦈 SharkTeeth26_</h1>
+    <p class="tagline">manik-manik lucu • gelang • kalung estetik</p>
+  </header>
+
+  <!-- INSTAGRAM DIRECT LINK -->
+  <div class="ig-bar">
+    <span class="ig-icon">📸</span>
+    <span>Pesan langsung via Instagram:</span>
+    <a class="ig-link" href="https://www.instagram.com/sharkteeth26_/?igsh=NzFrdmZkNWQwM25y" target="_blank" rel="noopener">
+      @sharkteeth26_
+    </a>
+    <span style="margin-left:0.3rem;">(klik & DM)</span>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- KATALOG PRODUK -->
+    <h2 class="section-title">✨ Koleksi Manik-Manik ✨</h2>
+    <div class="product-grid" id="productGrid"></div>
+
+    <!-- PANDUAN PRE-ORDER (DM ONLY) -->
+    <div class="po-guide">
+      <h3>💌 Cara Order (Pre-Order via DM Instagram)</h3>
+      <ul class="po-steps">
+        <li><span class="step-number">1</span> Klik tombol <span class="highlight">"Pesan lewat DM"</span> di produk pilihanmu.</li>
+        <li><span class="step-number">2</span> Kamu akan langsung diarahkan ke Direct Message Instagram <strong>@sharkteeth26_</strong>.</li>
+        <li><span class="step-number">3</span> Kirim format: <span class="highlight">Nama produk + Jumlah</span> (contoh: "Gelang Daisy 2 pcs").</li>
+        <li><span class="step-number">4</span> Admin akan membalas untuk konfirmasi harga & estimasi pengiriman.</li>
+        <li><span class="step-number">5</span> <strong>Tidak ada kontak WA</strong> – seluruh pemesanan hanya lewat DM Instagram.</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>©️ 2026 SharkTeeth26_ – Manik-manik handmade dengan ❤️</p>
+    <p>DM eksklusif di <a class="footer-ig" href="https://www.instagram.com/sharkteeth26_/?igsh=NzFrdmZkNWQwM25y" target="_blank" rel="noopener">Instagram @sharkteeth26_</a></p>
+  </footer>
+
+  <script>
+    (function() {
+      // ------- DATA PRODUK (gambar dari Freepik / Google image placeholder) -------
+      const products = [
+        {
+          name: "Gelang Manik Daisy",
+          price: "Rp25.000",
+          img: "https://img.freepik.com/free-photo/colorful-beaded-bracelet-isolated_23-2151328468.jpg",
+          igLink: "https://www.instagram.com/sharkteeth26_/?igsh=NzFrdmZkNWQwM25y"
+        },
+        {
+          name: "Kalung Mutiara Pastel",
+          price: "Rp42.000",
+          img: "https://img.freepik.com/free-photo/beaded-necklace-with-pink-background_23-2150106384.jpg",
+          igLink: "https://www.instagram.com/sharkteeth26_/?igsh=NzFrdmZkNWQwM25y"
+        },
+        {
+          name: "Gelang Alphabet Name",
+          price: "Rp30.000",
+          img: "https://img.freepik.com/free-photo/personalized-beaded-bracelet-white_23-2151328448.jpg",
+          igLink: "https://www.instagram.com/sharkteeth26_/?igsh=NzFrdmZkNWQwM25y"
+        },
+        {
+          name: "Phone Strap Manik",
+          price: "Rp35.000",
+          img: "https://img.freepik.com/free-photo/colorful-beaded-phone-strap_23-2151328498.jpg",
+          igLink: "https://www.instagram.com/sharkteeth26_/?igsh=NzFrdmZkNWQwM25y"
+        }
+      ];
+
+      const grid = document.getElementById('productGrid');
+
+      function renderProducts() {
+        if (!grid) return;
+        grid.innerHTML = products.map(product => `
+          <div class="product-card">
+            <img 
+              src="${product.img}" 
+              alt="${product.name}" 
+              class="product-img"
+              onerror="this.onerror=null; this.src='https://img.freepik.com/free-vector/flat-design-jewelry-collection_23-2148879177.jpg';"
+            >
+            <div class="product-title">${product.name}</div>
+            <div class="product-price">${product.price}</div>
+            <!-- TOMBOL PESAN LANGSUNG KE DM IG, TIDAK ADA WA -->
+            <a 
+              href="${product.igLink}" 
+              target="_blank" 
+              rel="noopener" 
+              class="dm-order-btn"
+            >
+              <i>💬</i> Pesan lewat DM
+            </a>
+          </div>
+        `).join('');
+      }
+
+      renderProducts();
+    })();
+  </script>
+
+</body>
+</html>
