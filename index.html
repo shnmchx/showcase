@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>SharkTeeth26 • Manik-Manik Estetik</title>
+  <title>SharkTeeth26 • Manik-Manik Craft Supplies</title>
   <style>
     * {
       margin: 0;
@@ -60,6 +60,7 @@
       color: #b3446c;
       border-bottom: 1px solid #f8bbd0;
       flex-wrap: wrap;
+      text-align: center;
     }
 
     .ig-icon {
@@ -78,9 +79,42 @@
       border-bottom-color: #7a2e4a;
     }
 
+    /* ===== BUSINESS INFO ===== */
+    .business-info {
+      max-width: 850px;
+      margin: 2rem auto 1.2rem;
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 1.8rem 2rem;
+      text-align: center;
+      box-shadow: 0 12px 26px rgba(245, 175, 190, 0.3);
+      border: 1px solid #ffeef2;
+    }
+
+    .business-info h2 {
+      font-size: 1.8rem;
+      color: #b3446c;
+      margin-bottom: 0.8rem;
+    }
+
+    .business-info p {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-box {
+      background: #fff0f3;
+      border-radius: 20px;
+      padding: 1rem 1.4rem;
+      margin-top: 1.2rem;
+      font-weight: 600;
+      color: #b3446c;
+      display: inline-block;
+    }
+
     /* ===== MAIN CATALOG ===== */
     .container {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 2rem auto;
       padding: 0 1.2rem;
     }
@@ -104,9 +138,12 @@
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
       margin-bottom: 2.5rem;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .product-card {
@@ -135,7 +172,6 @@
       background: #ffeef4;
       margin-bottom: 1.1rem;
       box-shadow: 0 6px 12px rgba(0,0,0,0.06);
-      transition: 0.2s;
     }
 
     .product-title {
@@ -143,6 +179,13 @@
       font-size: 1.3rem;
       color: #5a3e4b;
       margin-bottom: 0.2rem;
+      text-align: center;
+    }
+
+    .product-desc {
+      font-size: 0.9rem;
+      color: #8e7a82;
+      margin-bottom: 0.3rem;
       text-align: center;
     }
 
@@ -186,17 +229,18 @@
       font-size: 1.25rem;
     }
 
-    /* ===== PO GUIDE ===== */
-    .po-guide {
+    /* ===== CRAFT GUIDE ===== */
+    .craft-guide {
       background: #ffffff;
       border-radius: 35px;
       padding: 2rem 1.8rem;
-      margin: 2.8rem 0 2rem;
+      margin: 2.8rem auto 2rem;
+      max-width: 850px;
       box-shadow: 0 15px 28px rgba(255, 192, 203, 0.3);
       border: 1px solid #ffe4ec;
     }
 
-    .po-guide h3 {
+    .craft-guide h3 {
       font-size: 1.8rem;
       color: #b3446c;
       margin-bottom: 1.2rem;
@@ -205,14 +249,14 @@
       gap: 0.4rem;
     }
 
-    .po-steps {
+    .craft-steps {
       list-style: none;
       padding-left: 0.2rem;
     }
 
-    .po-steps li {
+    .craft-steps li {
       margin-bottom: 0.8rem;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       display: flex;
       align-items: baseline;
       gap: 0.6rem;
@@ -273,71 +317,83 @@
   <!-- HEADER -->
   <header>
     <h1 class="shop-name">🦈 SharkTeeth26_</h1>
-    <p class="tagline">manik-manik lucu • gelang • kalung estetik</p>
+    <p class="tagline">manik-manik lucu • supplies crafting • konsultasi gratis</p>
   </header>
 
   <!-- INSTAGRAM DIRECT LINK -->
   <div class="ig-bar">
     <span class="ig-icon">📸</span>
-    <span>Pesan langsung via Instagram:</span>
+    <span>Pesan & konsultasi crafting langsung via Instagram:</span>
     <a class="ig-link" href="https://www.instagram.com/sharkteeth26_/?igsh=NzFrdmZkNWQwM25y" target="_blank" rel="noopener">
       @sharkteeth26_
     </a>
     <span style="margin-left:0.3rem;">(klik & DM)</span>
   </div>
 
+  <!-- INFO BISNIS -->
+  <div class="business-info">
+    <h2>🛍️ Beli Manik-Maniknya, Craft Sendiri!</h2>
+    <p>Kami <strong>TIDAK menjual produk jadi</strong> (gelang/kalung/strap).</p>
+    <p>Kami menyediakan <strong>manik-manik lepas + aksesoris pendukung</strong> agar kamu bisa merangkai sendiri kreasimu.</p>
+    <div class="highlight-box">
+      🎨 Butuh panduan crafting? Tim kami siap bantu arahkan lewat DM!
+    </div>
+  </div>
+
   <!-- MAIN CONTENT -->
   <main class="container">
 
-    <!-- KATALOG PRODUK -->
+    <!-- KATALOG 3 MANIK-MANIK LEPAS -->
     <h2 class="section-title">✨ Koleksi Manik-Manik ✨</h2>
     <div class="product-grid" id="productGrid"></div>
 
-    <!-- PANDUAN PRE-ORDER (DM ONLY) -->
-    <div class="po-guide">
-      <h3>💌 Cara Order (Pre-Order via DM Instagram)</h3>
-      <ul class="po-steps">
-        <li><span class="step-number">1</span> Klik tombol <span class="highlight">"Pesan lewat DM"</span> di produk pilihanmu.</li>
-        <li><span class="step-number">2</span> Kamu akan langsung diarahkan ke Direct Message Instagram <strong>@sharkteeth26_</strong>.</li>
-        <li><span class="step-number">3</span> Kirim format: <span class="highlight">Nama produk + Jumlah</span> (contoh: "Gelang Daisy 2 pcs").</li>
-        <li><span class="step-number">4</span> Admin akan membalas untuk konfirmasi harga & estimasi pengiriman.</li>
-        <li><span class="step-number">5</span> <strong>Tidak ada kontak WA</strong> – seluruh pemesanan hanya lewat DM Instagram.</li>
+    <!-- PANDUAN ORDER + KONSULTASI CRAFTING -->
+    <div class="craft-guide">
+      <h3>💌 Cara Order & Minta Arahan Crafting</h3>
+      <ul class="craft-steps">
+        <li><span class="step-number">1</span> Pilih manik-manik favoritmu, klik <span class="highlight">"Pesan / Tanya Crafting"</span>.</li>
+        <li><span class="step-number">2</span> Kamu akan langsung masuk ke Direct Message Instagram <strong>@sharkteeth26_</strong>.</li>
+        <li><span class="step-number">3</span> Kirim pesan format: <span class="highlight">[Nama Manik] + Jumlah</span> (contoh: "Manik Bunga Daisy 2 pack").</li>
+        <li><span class="step-number">4</span> Ingin tanya cara merangkai? Tanyakan langsung di DM, tim kami bantu arahkan.</li>
+        <li><span class="step-number">5</span> <strong>Tidak ada kontak WA</strong> – seluruh pemesanan & konsultasi hanya lewat DM Instagram.</li>
       </ul>
     </div>
   </main>
 
   <!-- FOOTER -->
   <footer>
-    <p>©️ 2026 SharkTeeth26_ – Manik-manik handmade dengan ❤️</p>
-    <p>DM eksklusif di <a class="footer-ig" href="https://www.instagram.com/sharkteeth26_/?igsh=NzFrdmZkNWQwM25y" target="_blank" rel="noopener">Instagram @sharkteeth26_</a></p>
+    <p>© 2026 SharkTeeth26_ – Supplies manik-manik handmade ❤️</p>
+    <p>DM untuk order & konsultasi crafting di 
+      <a class="footer-ig" href="https://www.instagram.com/sharkteeth26_/?igsh=NzFrdmZkNWQwM25y" target="_blank" rel="noopener">
+        Instagram @sharkteeth26_
+      </a>
+    </p>
+    <p style="font-size:0.85rem; margin-top:0.5rem;">Kami hanya menjual manik lepas & aksesoris – bukan produk jadi.</p>
   </footer>
 
   <script>
     (function() {
-      // ------- DATA PRODUK (gambar dari Freepik / Google image placeholder) -------
+      // ------- 3 PRODUK DENGAN GAMBAR LOKAL -------
       const products = [
         {
-          name: "Gelang Manik Daisy",
-          price: "Rp25.000",
-          img: "https://img.freepik.com/free-photo/colorful-beaded-bracelet-isolated_23-2151328468.jpg",
+          name: "Manik Bunga Daisy (per pack)",
+          desc: "Isi ±50pcs, warna pastel random",
+          price: "Rp18.000",
+          img: "gambar1.jpeg",
           igLink: "https://www.instagram.com/sharkteeth26_/?igsh=NzFrdmZkNWQwM25y"
         },
         {
-          name: "Kalung Mutiara Pastel",
-          price: "Rp42.000",
-          img: "https://img.freepik.com/free-photo/beaded-necklace-with-pink-background_23-2150106384.jpg",
+          name: "Manik Mutiara Mini 6mm",
+          desc: "1 pack isi 100pcs, glossy finish",
+          price: "Rp22.000",
+          img: "gambar2.jpeg",
           igLink: "https://www.instagram.com/sharkteeth26_/?igsh=NzFrdmZkNWQwM25y"
         },
         {
-          name: "Gelang Alphabet Name",
-          price: "Rp30.000",
-          img: "https://img.freepik.com/free-photo/personalized-beaded-bracelet-white_23-2151328448.jpg",
-          igLink: "https://www.instagram.com/sharkteeth26_/?igsh=NzFrdmZkNWQwM25y"
-        },
-        {
-          name: "Phone Strap Manik",
-          price: "Rp35.000",
-          img: "https://img.freepik.com/free-photo/colorful-beaded-phone-strap_23-2151328498.jpg",
+          name: "Manik Alphabet / Huruf",
+          desc: "Bisa custom nama, 1 pack 30 huruf",
+          price: "Rp20.000",
+          img: "gambar3.jpeg",
           igLink: "https://www.instagram.com/sharkteeth26_/?igsh=NzFrdmZkNWQwM25y"
         }
       ];
@@ -352,18 +408,18 @@
               src="${product.img}" 
               alt="${product.name}" 
               class="product-img"
-              onerror="this.onerror=null; this.src='https://img.freepik.com/free-vector/flat-design-jewelry-collection_23-2148879177.jpg';"
+              onerror="this.onerror=null; this.style.background='#ffeef4'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.fontSize='0.9rem'; this.style.color='#b3446c'; this.alt='Gambar tidak ditemukan';"
             >
             <div class="product-title">${product.name}</div>
+            <div class="product-desc">${product.desc}</div>
             <div class="product-price">${product.price}</div>
-            <!-- TOMBOL PESAN LANGSUNG KE DM IG, TIDAK ADA WA -->
             <a 
               href="${product.igLink}" 
               target="_blank" 
               rel="noopener" 
               class="dm-order-btn"
             >
-              <i>💬</i> Pesan lewat DM
+              <i>💬</i> Pesan / Tanya Crafting
             </a>
           </div>
         `).join('');
